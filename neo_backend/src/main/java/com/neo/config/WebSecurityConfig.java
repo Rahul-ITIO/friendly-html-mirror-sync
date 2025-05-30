@@ -30,7 +30,8 @@ public class WebSecurityConfig {
             "http://localhost:3000", 
             "http://localhost:8080",
             "http://localhost:5000",
-            "http://localhost:9003"
+            "http://localhost:9003",
+            "https://localhost:3000" // Added HTTPS support for localhost:3000
         ));
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(Arrays.asList(

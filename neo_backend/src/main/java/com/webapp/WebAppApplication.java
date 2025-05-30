@@ -24,6 +24,7 @@ public class WebAppApplication implements WebMvcConfigurer {
 
 	static {
 		TRUSTED_SOURCES.add("http://localhost:3000");
+		TRUSTED_SOURCES.add("https://localhost:3000");
 	}
 
 	// method to add trusted sources via application context
@@ -57,7 +58,7 @@ public class WebAppApplication implements WebMvcConfigurer {
 
 		registry.addMapping("/**")
 				// .allowedOrigins(TRUSTED_SOURCES.toArray(new String[TRUSTED_SOURCES.size()]))
-				.allowedOrigins("http://localhost:3000")
+				.allowedOrigins("http://localhost:3000", "https://localhost:3000")
 				.allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD")
 				.allowedHeaders("origin", "content-type", "accept", "authorization", "user-agent", "host",
 						"X-Forwarded-For", "X-Forwarded-Proto", "X-Forwarded-Port", "X-Redirected-Path",
