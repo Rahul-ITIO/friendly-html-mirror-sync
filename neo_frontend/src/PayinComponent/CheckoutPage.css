@@ -1,0 +1,834 @@
+.checkout-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.cc .container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 20px;
+  font-size: 14px;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.cc .checkout-header {
+  background: #6200ee;
+  color: white;
+  padding: 1.5rem;
+}
+
+.cc .header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.cc .hide {display: none !important;}
+.cc .header-left {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.cc .header-text h6 {
+  margin: 0;
+  opacity: 0.9;
+}
+
+.cc .header-text h5 {
+  margin: 0.25rem 0;
+  font-weight: 500;
+}
+
+.cc .header-text h3 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.cc .header-buttons {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.cc .header-action-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.cc .header-action-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.cc .main-content {
+  flex: 1;
+  padding-bottom: 120px;
+}
+
+.cc .checkout-footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  border-top: 1px solid #eee;
+  z-index: 100;
+}
+
+.cc .view-customer-info {
+  border-bottom: 1px solid #eee;
+}
+
+.cc .view-info-btn {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  background: transparent;
+  color: #6200ee;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.cc .view-info-btn:hover {
+  background: #f5f5f5;
+}
+
+.cc .powered-by {
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.cc .customer-info-popup {
+  position: fixed;
+  bottom: 90px;
+  left: 0;
+  right: 0;
+  background: white;
+  border-top: 1px solid #eee;
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.1);
+  z-index: 99;
+}
+
+.cc .info-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.cc .info-header button {
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+}
+
+.cc .info-content {
+  padding: 1rem;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.cc .checkout-container {
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+.cc .payment-header {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background: #6200ee !important;
+}
+
+.cc .qr-container {
+  width: 240px;
+  height: 240px;
+  border: 2px solid #eee;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 0 auto;
+  background: white;
+  position: relative;
+}
+
+.cc .qr-placeholder {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cc .qr-code {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 10px;
+}
+
+.cc .app-icon {
+  height: 24px;
+  width: auto;
+  object-fit: contain;
+}
+
+.cc .divider {
+  text-align: center;
+  position: relative;
+  margin: 2rem 0;
+}
+
+.cc .divider::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  border-top: 1px solid #eee;
+}
+
+.cc .divider span {
+  background: white;
+  padding: 0 1rem;
+  color: #666;
+  position: relative;
+}
+
+.cc .upi-option {
+  padding: 1rem;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.2s;
+}
+
+.cc .upi-option:hover {
+  background-color: #f8f9fa;
+  transform: translateY(-1px);
+}
+
+.cc .upi-option.selected {
+  border-color: #0d6efd;
+  background-color: #f8f9fa;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.cc .payment-option {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cc .payment-option:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.cc .payment-option.active {
+  border-color: #6200ee;
+  background-color: #f7f2ff;
+}
+
+.cc .option-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f5f5;
+  border-radius: 8px;
+  font-size: 20px;
+}
+
+.cc .checkout-container .badge {
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 20px;
+}
+
+.cc .crypto-options {
+  border-left: 2px solid #e0e0e0;
+  margin-left: 20px;
+  padding-left: 20px;
+}
+
+.cc .card-payment-form {
+  background: #fff;
+  min-height: 100vh;
+}
+
+.cc .payment-header-purple {
+  background: #6200ee;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 0;
+}
+
+.cc .header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cc .left-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cc .circle {
+  width: 32px;
+  height: 32px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.cc .back-section {
+  padding: 1rem;
+  background: white;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+}
+
+.cc .back-button {
+  border: none;
+  background: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  cursor: pointer;
+  color: #666;
+  transition: all 0.2s ease;
+}
+
+.cc .back-button:hover {
+  background: #f5f5f5;
+  color: #6200ee;
+}
+
+.cc .card-form {
+  padding: 1.5rem;
+  background: white;
+}
+
+.cc .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.cc .form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #666;
+}
+
+.cc .form-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.cc .payment-footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cc .amount-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cc .pay-button {
+  background: #6200ee;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+}
+
+.cc .details-popup {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.cc .details-header {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cc .details-content {
+  padding: 1rem;
+}
+
+.cc .details-footer {
+  padding: 1rem;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cc .small-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+input.form-control, select.form-select {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.cc .qr-section {
+  background: white;
+  border-radius: 8px;
+  margin: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.cc .show-qr-btn {
+  background: #6200ee;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+}
+
+.cc .crypto-details {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.cc .crypto-payment-form .qr-section,
+.cc .upi-payment-form .qr-section {
+  background: white;
+  padding: 2rem;
+  margin: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.cc .upi-apps {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.cc .upi-app-btn {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background: white;
+  width: 100%;
+  cursor: pointer;
+}
+
+.cc .upi-app-btn img {
+  width: 24px;
+  height: 24px;
+  margin-right: 0.75rem;
+}
+
+.cc .supported-apps {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.cc .supported-apps img {
+  height: 24px;
+  width: auto;
+}
+
+.cc .change-payment-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.cc .change-payment-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.cc .customer-info-container {
+  position: fixed;
+  bottom: 48px;
+  left: 0;
+  right: 0;
+  background: white;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+  z-index: 999;
+}
+
+.cc .customer-info-toggle {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  background: transparent;
+  color: #6200ee;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s;
+}
+
+.cc .customer-info-toggle:hover {
+  background: #f5f5f5;
+}
+
+.cc .customer-info-content {
+  background: white;
+  border-top: 1px solid #eee;
+  padding: 1rem;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.cc .customer-info-content {
+  padding: 1rem;
+  border-top: 1px solid #dee2e6;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.cc .info-row {
+  display: flex;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.cc .info-label {
+  width: 120px;
+  color: #666;
+  font-weight: 500;
+}
+
+.cc .info-value {
+  flex: 1;
+}
+
+.cc .modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.cc .modal-content {
+  background: white;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.cc .modal-header {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cc .modal-header button {
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  padding: 0.25rem;
+  cursor: pointer;
+}
+
+.cc .modal-body {
+  padding: 1rem;
+}
+
+.cc .modal-footer {
+  padding: 1rem;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.cc .customer-info-modal {
+  max-width: 600px;
+}
+
+.cc .customer-info-form .form-group {
+  margin-bottom: 1rem;
+}
+
+.cc .customer-info-form label {
+  font-size: 0.875rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.cc .form-control-static {
+  background: #f8f9fa;
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 0;
+  min-height: 42px;
+  color: #333;
+}
+
+.cc .edit-btn {
+  padding: 0.375rem 1rem;
+  border: 1px solid #6200ee;
+  background: transparent;
+  color: #6200ee;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+}
+
+.cc .edit-btn:hover {
+  background: #6200ee;
+  color: white;
+}
+
+.cc .customer-info-modal {
+  max-width: 500px;
+}
+
+.cc .info-section {
+  margin-bottom: 1.5rem;
+}
+
+.cc .section-title {
+  color: #666;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.cc .info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.cc .info-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.cc .info-label {
+  font-size: 0.875rem;
+  color: #666;
+  margin-bottom: 0.25rem;
+}
+
+.cc .info-value {
+  font-weight: 500;
+}
+
+.cc .status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  background: #e8f5e9;
+  color: #2e7d32;
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+.cc .address-box {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+}
+
+.cc .close-btn {
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  padding: 0.25rem;
+  cursor: pointer;
+  color: #666;
+}
+
+.cc .close-btn:hover {
+  color: #000;
+}
+
+.cc .customer-info-form {
+  padding: 1rem 0;
+}
+
+.cc .form-control-static {
+  padding: 0.5rem;
+  margin: 0;
+  background: #f8f9fa;
+  border-radius: 4px;
+  min-height: 38px;
+}
+
+.cc .edit-btn {
+  padding: 0.25rem 1rem;
+  border: 1px solid #6200ee;
+  background: transparent;
+  color: #6200ee;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cc .edit-btn:hover {
+  background: #6200ee;
+  color: white;
+}
+
+.cc .modal-actions {
+  display: flex;
+  align-items: center;
+}
+
+.cc .info-display {
+  padding: 1rem;
+}
+
+.cc .info-field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  padding: 0.5rem;
+  background: #f8f9fa;
+  border-radius: 4px;
+}
+
+.cc .info-field-label {
+  width: 100px;
+  font-weight: 500;
+  color: #666;
+}
+
+.cc .info-field-value {
+  flex: 1;
+}
+
+.cc .customer-details-form {
+  background: #fff;
+  min-height: 100vh;
+}
+
+.cc .form-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cc .form-group {
+  margin-bottom: 1rem;
+}
+
+.cc .form-control {
+  height: 48px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+}
+
+.cc .form-control.is-invalid {
+  border-color: #dc3545;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 24px 24px;
+}
+
+.cc .invalid-feedback {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.cc .next-button {
+  background: #6200ee;
+  height: 48px;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.cc .view-details-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  border-top: 1px solid #eee;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

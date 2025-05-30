@@ -1,0 +1,7 @@
+const API_BASE_URL  = process.env.REACT_APP_API_BASE_URL;
+
+ fetch(`${API_BASE_URL}/api/user/send/reset-password/mail`,
+ 
+ fetch(`${process.env.REACT_APP_BASE_URL}/api/user/reset-password"
+ 
+ fetch(`${process.env.REACT_APP_BASE_URL}/api/user/send/reset-password/mail"

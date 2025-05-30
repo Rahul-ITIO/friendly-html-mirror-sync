@@ -1,0 +1,1054 @@
+:root {
+  --header-color: white; /* Default header color if not fetched */
+  --sidebar-color:#f6f6f6; /* Default footer color if not fetched */
+}
+/* General styling for the App component */
+.App {
+  text-align: center;
+}
+/* Styling for the App logo */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+/* Animation for the App logo */
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+/* Header styling */
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color:  var(--header-color);
+}
+/* Link styling */
+.App-link {
+  color: #6187fb;
+}
+
+/* Toggle button styles */
+.toggle-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  padding: 10px;
+  background-color: #333; /* Adjust the background color as needed */
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.toggle-container {
+  margin-top: 20px; /* Adjust the margin-top as needed */
+  
+}
+.toggle-button {
+  /* Add your toggle button styles here */
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.toggle-button:hover {
+  background-color: #0056b3;
+}
+/* Keyframes for logo spinning animation */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* Margin-top and font-size for mt-2 class */
+.mt-2{
+  padding-top: 50px;
+  padding-left:200px;
+  font-size: 14px;
+   width: 100%;
+}
+/* Inner sidebar styling */
+.InnerSidebar {
+  padding-left: 0;
+}
+
+.InnerSidebar ul {
+  padding-top: 30px;
+  list-style-type: none;
+  padding-left: 0;
+  padding-right: 50px;
+
+}
+html select option:disabled, select.form-control option:disabled, select.form-control option[disabled] {
+  color: #dc04d8 !important;
+  background-color: #dc04d8 !important;
+  background: #dc04d8 !important;
+  font-weight: bold;
+}
+
+html select.form-select, html select.form-control {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.InnerSidebar li {
+  cursor: pointer;
+  padding: 15px;
+  margin-bottom: 10px;
+  background-color: #eaf4f4;
+  border-radius: 5px;
+  position: relative;
+}
+
+/* Styles for the checkmark */
+.InnerSidebar li.completed span {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+.modal.show .modal-dialog {
+  z-index: 99;
+}
+.modal-backdrop.show {
+  z-index: 1;
+}
+
+/* Container styling */
+.container{
+  padding-left:200px;
+  padding-right:100px;
+
+}.col{
+  padding: 5px;
+}
+/* Icon container styling */
+.icon-container {
+  display: flex;
+  align-items: center;
+}
+/* Circle styling */
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  margin-right: 10px;
+}
+/* Completed circle styling */
+.completed {
+  border-color: green;
+  
+}
+
+.circle svg {
+  color: #ccc;
+  font-size: 16px;
+}
+
+.completed svg {
+  color: green;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown button */
+.dropdown button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  border: none;
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 160px;
+  /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); */
+  z-index: 1;
+}
+
+/* Dropdown menu items */
+.dropdown-menu a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}.modal{
+  padding-top: 40px;
+  padding-left:210px;
+}
+.camera-input {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.camera-icon {
+  top: 0%;
+  font-size: 2.5rem;
+  color: #170202;
+  transition: transform 0.3s ease;
+}
+
+.camera-input input[type='file'] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.camera-input:hover .camera-icon {
+  transform: scale(1.2);
+}.profile-image{
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  height: 200px;
+  border-radius: 100%;
+  border: 2px solid #ccc;
+}.watermark {
+  font-size: 12px; /* Adjust font size as needed */
+  color: gray; /* Color of the watermark text */
+  margin-top: 5px; /* Adjust margin top as needed to position the watermark */
+}.logo-image{
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 120px;
+  border-radius: 10%;
+  border: 2px solid #ccc;
+}
+.header {
+  background-color: var(--header-color); /* Adjust background color as needed */
+  height: 60px; /* Adjust the height as needed */
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  background: linear-gradient(90deg, #282f4b 0%, #282f4b 100%);
+
+  /* font-size: calc(10px + 2vmin); */
+  color: var(--header-color);
+  z-index: 1000; 
+  
+
+}
+
+.sidebar {
+  width: 200px;
+  height: 93%;
+  background-color: var(--sidebar-color); /* Adjust the background color as needed */
+  overflow-y: auto; /* Allow scrolling within the sidebar */
+  position: fixed; /* Fix the sidebar position */
+  top: 55px; /* Place below the header */
+  left: 0;
+  padding-left: 10px;
+    background: linear-gradient(90deg, #282f4b 0%, #282f4b 100%);
+  
+  padding-top: 20px; /* Adjust padding if needed */
+  transition: left 0.3s ease; /* Add smooth transition effect */
+  z-index: 500; /* Ensure the sidebar is below the header */
+  left: 70px;
+}
+
+.first-left-panel .sidebar, .first-left-panel.sidebar {
+  left: 0px;
+  background: #1876d2;
+}
+
+.sidebar li {
+  cursor: pointer;
+  padding-left: 5px;
+  padding-right: 0px;
+  padding-top : 5px;
+  padding-bottom : 5px;
+  font-size: 13px;
+  margin: 0px;
+  /* background: linear-gradient(90deg, #374065 0%, #374065 100%); */
+  margin-bottom: 10px;
+  /* border-radius: 10px; */
+  /* border-bottom: 1px solid #a8a9ac;  */
+}
+.sidebar ul{  
+  width: 93%;
+    /* background: linear-gradient(90deg, #727eaf 0%, #48568f 100%); */
+
+}
+.sidebar li:hover {
+  /* transform: translateY(-5px); */
+  height: 20%;
+  /* box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); */
+  background: linear-gradient(90deg, #5a6277 0%, #5a6277 100%);
+
+
+}  .sidebar-text{color: #f6f6f6;}
+
+.sidebar.show {
+  /* left: 0; Show the sidebar when the showSidebar state is true */
+}
+.modal-2{
+  padding-top: 3.5%;
+  padding-left:330px;
+  height: 100%;
+}
+.modal-body{  padding:20px;
+}
+.right-align {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Ensure this aligns the ProfileHeader to the right */
+}
+.Toastify__toast{
+margin-top: 60px;
+}
+
+
+
+
+html {
+  font-size: 16px;
+
+}
+
+/* Responsive typography */
+body {
+  font-size: 1rem; /* Base font size */
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 1.1rem; /* Increase font size for medium screens */
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    font-size: 1.2rem; /* Further increase font size for large screens */
+  }
+}
+
+/* Responsive layout */
+.container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 85px 20px 20px 290px;
+  font-size: 14px;
+}
+
+.container.base {
+  padding: 120px 20px;
+  font-size: 14px;
+}
+
+/* Responsive navigation menu */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-nav {
+  display: flex;
+  list-style: none;
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive forms */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Responsive buttons */
+
+
+/* Media query for adjusting button size on small screens */
+@media screen and (max-width: 576px) {
+  .btn {
+    padding: 8px 16px;
+  }
+
+  
+}
+
+
+
+
+
+/* For  TFA Security Page */
+.auth-container {
+  max-width: calc(100% - 270px);
+  padding: 2rem;
+  border-radius: 8px;
+  background-color: #fff;
+  margin-left: 270px;
+  margin-top: calc(70px + 0rem);
+}
+
+.auth-form-group {
+  margin-bottom: 15px;
+}
+
+.auth-checkbox {
+  margin-right: 10px;
+}
+
+.auth-label {
+  font-weight: bold;
+}
+
+.auth-input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.auth-button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.auth-button:hover {
+  background-color: #0056b3;
+}
+
+.auth-button-disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.auth-success-message-panel {
+  display: flex;
+  align-items: center;
+}
+
+.auth-success-icon {
+  font-size: 24px;
+  color: green;
+  margin-right: 10px;
+}
+
+.auth-success-message {
+  font-size: 18px;
+  color: green;
+}
+
+.auth-qr-code img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .auth-input {
+    padding: 0px;
+  }
+
+  .auth-button {
+    font-size: 14px;
+  }
+
+  .auth-success-message-panel {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .auth-success-icon {
+    margin-bottom: 5px;
+  }
+}
+
+.error-message {
+  color: red;
+}
+
+.register {width: 100%; align-items: center;  padding-top: 70px;
+  font-family: sans-serif;
+  font-size: 14px;
+  padding-left: 35%;  padding-right: 35%;
+  
+
+}.register input {  font-family: sans-serif;font-size: 14px;
+  /* background-color: #d2e4e9; */
+}
+
+
+
+
+@media screen and (max-width: 576px) {
+  .App-logo {
+    height: 20vmin;
+  }
+  .p{width: 100%;}
+
+  .App-header {
+    font-size: calc(8px + 2vmin);
+  }
+  .Toastify__toast{
+    margin-top: 0px;
+    width: 50%;
+    height:40%;
+    align-items: center;
+    margin-left: 25%;
+    }
+  .header {
+    height: 60px;
+  }
+  .register{width: 100%; align-items: center; 
+    font-size: 14px;
+    padding: 1%;
+    padding-top: 70px;
+  
+  }
+  
+  .nav-items {
+    display: block; /* Display navigation items vertically on small screens */
+    font-size: 14px; /* Smaller font size for mobile */
+  }
+  .header .toggle-button {
+    display: block; /* Display toggle button on small screens */
+
+  }
+  .a,.mt-2{font-size: 11px;}
+
+  /* .card{font-size: 9px;}   */
+  .sidebar {
+    width: 100%;
+    top: 60px;
+    transform: translateX(-100%); /* Initially hide the sidebar on small screens */
+  }
+
+  .sidebar.show {
+    transform: translateX(0); /* Show the sidebar when the showSidebar state is true */
+  }
+
+  .menu-icon {
+    display: block; /* Display the menu icon */
+    padding-top: 4rem; /* Adjust padding top for smaller screens */
+    padding-left: 0rem;
+    font-size: 1rem; /* Adjust this value to make the icon smaller */
+  }
+
+  .toggle-button {
+    top: 15px;
+    left: 15px;
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .mt-2 {
+    padding-top: 3rem; /* Adjust padding top for smaller screens */
+    padding-left: 0rem; /* Adjust padding left for smaller screens */
+  }
+  .auth-container {
+    max-width: 100%;
+    padding: 0px;
+    border-radius: 8px;
+    background-color: #fff;
+    margin-left: 0px;
+  }
+  .container {
+    padding-top: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    font-size: 0.875rem; /* Smaller font size for buttons */
+  }
+
+  .auth-input {
+    padding: 8px;
+    font-size: 0.875rem; /* Smaller font size for inputs */
+  }
+
+  .auth-button {
+    font-size: 14px;
+  }
+
+  .auth-success-message-panel {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .auth-success-icon {
+    margin-bottom: 5px;
+  }
+
+  .profile-image {
+    width: 120px;
+    height: 100px;
+  }
+
+  .logo-image {
+    width: 90px;
+    height: 60px;
+  }
+
+  body {
+    font-size: 0.875rem; /* Smaller font size for body text */
+  }
+
+  .header, .sidebar, .auth-container, .container {
+    font-size: 0.875rem; /* Smaller font size for general elements */
+  }
+
+  .nav-items li, .sidebar li, .auth-label, .auth-button {
+    font-size: 0.875rem; /* Smaller font size for list items and labels */
+  }
+
+  .error-message {
+    font-size: 0.75rem; /* Smaller font size for error messages */
+  }
+
+  .dropdown-menu a {
+    font-size: 0.875rem; /* Smaller font size for dropdown menu items */
+  }
+
+  .modal {
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .modal-2 {
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .modal-body {
+    padding: 10px;
+  }
+
+
+  .circle {
+    width: 20px;
+    height: 20px;
+    font-size: 0.75rem;
+  }
+
+  .camera-icon {
+    font-size: 1.5rem;
+  }
+
+  .dropdown button {
+    font-size: 0.875rem;
+  }
+
+  .sidebar li {
+    padding: 8px;
+    font-size: 0.875rem;
+  }
+
+  .InnerSidebar li {
+    padding: 10px;
+    font-size: 0.875rem;
+  }
+  
+  .me-2,.btn{ font-size: x-small;}
+}
+
+
+
+
+.header{font-size:14px;}
+
+
+
+
+
+
+
+
+
+
+
+
+.dataContainer {
+  margin-right: 20px;
+  flex: 1 1 auto;
+}
+
+.dataItem {
+  display: flex;
+  align-items: center;
+  margin: 0px;
+}
+
+.colorBox {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+}
+
+.canvas {
+  flex: 1 1 auto;
+  width: 100%;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+
+
+  .dataContainer {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .canvas {
+    width: 150%;
+    height: auto;
+  }
+}
+
+.p{width:  60%;}
+
+
+
+.user-info {
+  margin-left: 50px;
+  margin-right: 35%;
+}
+
+.user-image {
+  width: 100px; /* Adjust size as needed */
+  height: 100px; /* Adjust size as needed */
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.user-name {
+  font-size: 24px; /* Adjust size as needed */
+  font-weight: bold;
+}
+.profile-header{
+  background: linear-gradient(90deg, #eff6fc 20%, #7eabd2 150%);
+
+}
+
+
+
+
+
+
+
+
+
+
+.custom-dropdown {
+  position: relative;
+  width: 200px; /* Adjust width as needed */
+}
+
+.selected-item {
+  padding: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.dropdown-items {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.dropdown-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+
+
+
+
+
+
+
+.custom-btn-primary {
+  background-color: #62a1e6;
+  border-color: rgb(67, 128, 193);
+  color: #fff;
+  height: 6rem;
+}
+
+.custom-btn-secondary {
+  background-color: #a893c5;
+  border-color: #a587cf;
+  color: #fff;
+}
+
+.custom-btn-primary:hover,
+.custom-btn-primary:focus,
+.custom-btn-primary:active,
+.custom-btn-primary.active,
+.custom-btn-secondary:hover,
+.custom-btn-secondary:focus,
+.custom-btn-secondary:active,
+.custom-btn-secondary.active {
+  background-color: #c6d1f3;
+  border-color: #c6d1f3;
+}
+
+.custom-btn i {
+  margin-right: 0.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+.common-account-list-item {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 13px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd; /* Optional: for better separation */
+  background-color: #ece6e7;
+  background: linear-gradient(90deg, #fafbfd 20%, #d8d5d5 100%);
+
+}
+
+.account-details {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns */
+  gap: 10px; /* Space between columns */
+}
+
+.account-detail {
+  display: contents; /* Make sure items flow into the grid cells */
+}
+
+.account-item {
+  margin-bottom: 5px;
+}
+
+.account-icon {
+  margin-right: 5px; /* Space between content and icon */
+  font-size: 3.5em; /* Adjust size as needed */
+  color: #876f6f; /* Adjust color as needed */
+}
+/* Basic Styling */
+.account-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.account-list-item {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 13px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+}
+
+.account-item {
+  display: flex;
+  align-items: center;
+}
+
+.account-item strong {
+  font-weight: bold;
+  color: #333;
+  margin-right: 10px;
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+
+  .container.base {
+    padding: 120px 0px;
+    width: 90%;
+  }
+
+  .account-list-item {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .account-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .account-item strong {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+  }
+  .common-account-list-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .account-details {
+    grid-template-columns: 1fr; /* Single column on smaller screens */
+    width: 100%; /* Full width */
+  }
+
+  .account-icon {
+    margin-left: 0; /* Remove margin on smaller screens */
+    margin-top: 10px; /* Add margin-top to separate icon from details */
+    font-size: 1.5em; /* Adjust size for better visibility on smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .account-list-item {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .account-item {
+    font-size: 14px;
+  }
+
+  .account-item strong {
+    font-size: 14px;
+  }
+}
+
+
+
+.transaction-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.transaction-detail-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.transaction-detail-item strong {
+  margin-right: 1rem;
+}
+
+
+
+
+
+
+/* DEV:- First Left Panel */
+.first-left-panel {
+  width: 70px;
+  background-color: cyan;
+  padding: 20px 5px;
+  text-align: center;
+  height: 100vh;
+}
+
+.first-left-panel .title {
+  margin: 0;
+  font-size: 20px;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Second Left Panel */
+.second-left-panel {
+  color: #fff;
+}
+
+.second-left-panel h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.second-left-panel ul {
+  list-style: none;
+  padding: 0;
+}
+
+.second-left-panel ul li {
+  margin: 10px 0;
+}
+
+.second-left-panel ul li a {
+  color: #fff;
+  text-decoration: none;
+}
